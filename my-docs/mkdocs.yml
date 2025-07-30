@@ -12,14 +12,16 @@ plugins:
 nav:
   - Home: home.md
   - Reference:
-      - DataFrame: dataframe_dataframe.md
-      - GroupBy: dataframe_groupby.md
-      - ILocIndexer: indexers_ilocindexer.md
-      - JIndex: dataframe_jindex.md
-      - JStringMethods: dataframe_jstringmethods.md
-      - LocIndexer: indexers_locindexer.md
-      - MultiIndex: indexers_multiindex.md
-      - Resamples: series_resampler.md
-      - Rolling: dataframe_rolling.md
-      - Series: series_series.md
-      - Vector: vector_vector.md
+      - Jandas:
+          - Base Module: jandas.md
+          - DataFrame: dataframe_dataframe.md
+          - GroupBy: dataframe_groupby.md
+          - ILocIndexer: indexers_ilocindexer.md
+          - JIndex: dataframe_jindex.md
+          - JStringMethods: dataframe_jstringmethods.md
+          - LocIndexer: indexers_locindexer.md
+          - MultiIndex: indexers_multiindex.md
+          - Resamples: series_resampler.md
+          - Rolling: dataframe_rolling.md
+          - Series: series_series.md
+          - Vector: vector_vector.md
