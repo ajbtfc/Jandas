@@ -1,0 +1,9 @@
+# API Reference
+
+::: Jandas.series.Resampler
+    options:
+        show_source: true
+        show_signature: true
+        show_root_heading: true
+        members_order: source
+        show_if_no_docstring: true
