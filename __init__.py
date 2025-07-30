@@ -277,3 +277,45 @@ def to_datetime(obj, fmt=None, errors="raise", default_year=None):
         return Series([parse(x) for x in obj.data])
     else:
         return parse(obj)
+
+def from_dataset(dataset):
+    """
+    Convert an Ignition Dataset to a Jandas DataFrame.
+
+    Parameters:
+    - dataset (Dataset): Ignition Dataset object.
+
+    Returns:
+    - DataFrame: Jandas DataFrame with the same data and column names.
+    """
+    if system is None:
+        raise RuntimeError("from_dataset requires Ignition's system module.")
+
+    columnNames = list(dataset.getColumnNames())
+    data = []
+
+    for rowIndex in range(dataset.getRowCount()):
+        row = []
+        for col in columnNames:
+            row.append(dataset.getValueAt(rowIndex, col))
+        data.append(row)
+
+    return DataFrame(data=data, columns=columnNames)
+
+
+def to_dataset(df):
+    """
+    Convert a Jandas DataFrame to an Ignition Dataset.
+
+    Parameters:
+    - df (DataFrame): Jandas DataFrame to convert.
+
+    Returns:
+    - Dataset: Ignition Dataset with the same data and column names.
+    """
+    if system is None:
+        raise RuntimeError("to_dataset requires Ignition's system module.")
+
+    headers = df.columns
+    data = [list(row) for row in df.data]
+    return system.dataset.toDataSet(headers, data)
