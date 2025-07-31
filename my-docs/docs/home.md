@@ -6,7 +6,7 @@ Jandas provides a simple, intuitive interface for working with tabular data in e
 
 ---
 
-## ⚙️ What Jandas Is
+## What Jandas Is
 
 - A minimal re-implementation of core `pandas` features, tailored for environments like **Ignition** where the real `pandas` cannot run.
 - Designed to work with Python objects like lists and dictionaries, common in Ignition datasets.
@@ -14,7 +14,7 @@ Jandas provides a simple, intuitive interface for working with tabular data in e
 
 ---
 
-## 🚧 Limitations
+## Limitations
 
 - Jandas is written in **pure Python**, not C or NumPy — which means it **does not match the performance** of `pandas`, especially for large datasets.
 - It is focused on **developer convenience** and **readability**, not computational efficiency.
@@ -23,7 +23,7 @@ Jandas provides a simple, intuitive interface for working with tabular data in e
 
 ---
 
-## 🔍 When to Use Jandas
+## When to Use Jandas
 
 - You're working inside **Ignition** or another Jython environment without access to `pandas`.
 - You want to write **clear, expressive, and testable** data logic that resembles modern Python data workflows.
@@ -31,7 +31,7 @@ Jandas provides a simple, intuitive interface for working with tabular data in e
 
 ---
 
-## 🚫 When *Not* to Use Jandas
+## When *Not* to Use Jandas
 
 - You need **high-performance** data manipulation (use native `pandas` in a proper Python runtime instead).
 - Your dataset contains millions of rows and complex statistical transformations.
@@ -39,7 +39,7 @@ Jandas provides a simple, intuitive interface for working with tabular data in e
 
 ---
 
-## 📦 Project Status
+## Project Status
 
 Jandas is **alpha-stage software**. While the core functionality is usable, the API may change, and performance optimizations are ongoing.
 
@@ -47,7 +47,7 @@ You are welcome to use it, experiment with it, and contribute ideas or code — 
 
 ---
 
-## 📚 Next Steps
+## Next Steps
 
 - [DataFrame](dataframe_dataframe.md)
 - [JIndex](dataframe_jindex.md)
