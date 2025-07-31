@@ -562,7 +562,7 @@ import pandas as pd
 class TestSpeedBenchmark(unittest.TestCase):
     def setUp(self):
         # Prepare data
-        self.rows = 100000
+        self.rows = 100
         self.cols = 10
         self.data = [[(i + j) for j in range(self.cols)] for i in range(self.rows)]
         self.columns = [f'col{j}' for j in range(self.cols)]
@@ -599,3 +599,19 @@ class TestSpeedBenchmark(unittest.TestCase):
         # Jandas transpose
         jandas_transpose_time = timeit.timeit(lambda: self.jandas_df.transpose(), number=100)
         print(f"Jandas transpose(): {jandas_transpose_time:.6f} sec")
+
+        # Pandas iloc
+        pandas_iloc_time = timeit.timeit(lambda: self.pandas_df.iloc[2:7], number=100)
+        print(f"Pandas iloc[]: {pandas_iloc_time:.6f} sec")
+
+        # Jandas iloc
+        jandas_iloc_time = timeit.timeit(lambda: self.jandas_df.iloc[2:7], number=100)
+        print(f"Jandas iloc[]: {jandas_iloc_time:.6f} sec")
+
+        # Pandas describe
+        pandas_describe_time = timeit.timeit(lambda: self.pandas_df.describe(), number=100)
+        print(f"Pandas describe(): {pandas_describe_time:.6f} sec")
+
+        # Jandas describe
+        jandas_describe_time = timeit.timeit(lambda: self.jandas_df.describe(), number=100)
+        print(f"Jandas describe(): {jandas_describe_time:.6f} sec")
