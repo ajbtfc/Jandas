@@ -603,7 +603,7 @@
         <li class="md-nav__item">
   <a href="#what-jandas-is" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ What Jandas Is
+      What Jandas Is
     </span>
   </a>
   
@@ -612,7 +612,7 @@
         <li class="md-nav__item">
   <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      🚧 Limitations
+      Limitations
     </span>
   </a>
   
@@ -621,7 +621,7 @@
         <li class="md-nav__item">
   <a href="#when-to-use-jandas" class="md-nav__link">
     <span class="md-ellipsis">
-      🔍 When to Use Jandas
+      When to Use Jandas
     </span>
   </a>
   
@@ -630,7 +630,7 @@
         <li class="md-nav__item">
   <a href="#when-not-to-use-jandas" class="md-nav__link">
     <span class="md-ellipsis">
-      🚫 When Not to Use Jandas
+      When Not to Use Jandas
     </span>
   </a>
   
@@ -639,7 +639,7 @@
         <li class="md-nav__item">
   <a href="#project-status" class="md-nav__link">
     <span class="md-ellipsis">
-      📦 Project Status
+      Project Status
     </span>
   </a>
   
@@ -648,7 +648,7 @@
         <li class="md-nav__item">
   <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Next Steps
+      Next Steps
     </span>
   </a>
   
@@ -674,14 +674,14 @@
 <p>Welcome to <strong>Jandas</strong>, a lightweight Python library designed to bring familiar <code>pandas</code>-style data manipulation to the <strong>Ignition platform</strong>.</p>
 <p>Jandas provides a simple, intuitive interface for working with tabular data in environments where the full power of <code>pandas</code> isn’t available — such as Jython scripting in Ignition. If you've ever wished for <code>.groupby()</code>, <code>.rolling()</code>, or <code>.loc[]</code> support while working inside your Ignition gateway or Perspective scripts, <strong>Jandas aims to give you just that</strong>.</p>
 <hr />
-<h2 id="what-jandas-is">⚙️ What Jandas Is</h2>
+<h2 id="what-jandas-is">What Jandas Is</h2>
 <ul>
 <li>A minimal re-implementation of core <code>pandas</code> features, tailored for environments like <strong>Ignition</strong> where the real <code>pandas</code> cannot run.</li>
 <li>Designed to work with Python objects like lists and dictionaries, common in Ignition datasets.</li>
 <li>Offers a familiar interface with classes like <code>DataFrame</code>, <code>Series</code>, and <code>GroupBy</code>.</li>
 </ul>
 <hr />
-<h2 id="limitations">🚧 Limitations</h2>
+<h2 id="limitations">Limitations</h2>
 <ul>
 <li>Jandas is written in <strong>pure Python</strong>, not C or NumPy — which means it <strong>does not match the performance</strong> of <code>pandas</code>, especially for large datasets.</li>
 <li>It is focused on <strong>developer convenience</strong> and <strong>readability</strong>, not computational efficiency.</li>
@@ -689,25 +689,25 @@
 <li>This project is still <strong>under active development</strong> — interfaces, behavior, and performance may change over time.</li>
 </ul>
 <hr />
-<h2 id="when-to-use-jandas">🔍 When to Use Jandas</h2>
+<h2 id="when-to-use-jandas">When to Use Jandas</h2>
 <ul>
 <li>You're working inside <strong>Ignition</strong> or another Jython environment without access to <code>pandas</code>.</li>
 <li>You want to write <strong>clear, expressive, and testable</strong> data logic that resembles modern Python data workflows.</li>
 <li>You’re operating on <strong>moderate-sized</strong> datasets where performance isn’t the top concern.</li>
 </ul>
 <hr />
-<h2 id="when-not-to-use-jandas">🚫 When <em>Not</em> to Use Jandas</h2>
+<h2 id="when-not-to-use-jandas">When <em>Not</em> to Use Jandas</h2>
 <ul>
 <li>You need <strong>high-performance</strong> data manipulation (use native <code>pandas</code> in a proper Python runtime instead).</li>
 <li>Your dataset contains millions of rows and complex statistical transformations.</li>
 <li>You require third-party integration with the broader Python data science ecosystem.</li>
 </ul>
 <hr />
-<h2 id="project-status">📦 Project Status</h2>
+<h2 id="project-status">Project Status</h2>
 <p>Jandas is <strong>alpha-stage software</strong>. While the core functionality is usable, the API may change, and performance optimizations are ongoing.</p>
 <p>You are welcome to use it, experiment with it, and contribute ideas or code — but be prepared for occasional sharp edges!</p>
 <hr />
-<h2 id="next-steps">📚 Next Steps</h2>
+<h2 id="next-steps">Next Steps</h2>
 <ul>
 <li><a href="dataframe_dataframe/">DataFrame</a></li>
 <li><a href="dataframe_jindex/">JIndex</a></li>
