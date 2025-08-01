@@ -1594,10 +1594,13 @@ class DataFrame:
             str: A string representation of the DataFrame in a tabular format.
         """
         # Create the header row
-        header = "\t".join(self.columns) if self.columns else ""
+        header = "\t" + "\t".join([str(x) for x in self.columns]) if self.columns else ""
 
         # Format the rows of data
-        rows = "\n".join("\t".join(str(cell) for cell in row) for row in self.data)
+        rows = "\n".join(
+            "\t".join([str(self.index[i])] + [str(cell) for cell in self.data[i]])
+            for i in range(len(self.data))
+        )
 
         # Combine header and rows
         return "{}\n{}".format(header, rows) if header else rows
