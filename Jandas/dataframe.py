@@ -1497,8 +1497,8 @@ class DataFrame:
         # Create the transposed DataFrame
         df_t = DataFrame(transposedData, columns=newColumns)
         df_t.index = JIndex(newIndex)
-        if isinstance(df_t.columns, range):
-            df_t.columns = list(df_t.columns)
+        # if isinstance(df_t.columns, range):
+        #     df_t.columns = list(df_t.columns)
         return df_t
 
     def join(self, other, on=None, how='left', lsuffix='', rsuffix=''):
